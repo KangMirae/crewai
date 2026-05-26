@@ -1,0 +1,23 @@
+lluvia_ideas_task:
+  description: >
+    [MODO LISTA] Haz una lista de 5 ideas de regalos para un amigo con personalidad '{mbti}'.
+    Para cada regalo: nombre, rango de precio, y 1 frase de por que encaja.
+  expected_output: >
+    Una lista de 5 ideas de regalos.
+  agent: listador_regalos
+
+critica_task:
+  description: >
+    Mira la lista y encuentra 2 regalos que son muy comunes para '{mbti}'.
+    Para cada uno, escribe 1 frase explicando por que se puede mejorar.
+  expected_output: >
+    Una lista de 2 regalos a mejorar y la razon.
+  agent: selector_regalos
+
+refinamiento_task:
+  description: >
+    [MODO LISTA] Cambia los 2 regalos comunes por 2 mejores para '{mbti}'.
+    Muestra la lista final de 5 regalos.
+  expected_output: >
+    La lista final de 5 recomendaciones de regalos.
+  agent: listador_regalos
