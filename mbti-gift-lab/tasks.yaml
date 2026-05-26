@@ -1,0 +1,23 @@
+brainstorm_task:
+  description: >
+    [LIST MODE] Make a list of 5 gift ideas for a person with '{mbti}' personality.
+    For each gift: name, price range, and 1 sentence why it fits.
+  expected_output: >
+    A list of 5 gift ideas.
+  agent: gift_lister
+
+critique_task:
+  description: >
+    Pick 2 gifts from the list that are too generic for '{mbti}'.
+    For each, write 1 sentence explaining why it should be replaced.
+  expected_output: >
+    A list of 2 gifts to be replaced and the reason.
+  agent: gift_picker
+
+refinement_task:
+  description: >
+    [LIST MODE] Replace the 2 weak gifts with 2 better ones for '{mbti}'.
+    Output the final list of 5 gifts.
+  expected_output: >
+    The final list of 5 gift recommendations.
+  agent: gift_lister
